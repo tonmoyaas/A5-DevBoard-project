@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>blog page</title>
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -16,19 +17,21 @@
                 <div class="bg-blue-600 p-2 rounded-lg mr-2">
                     <img src="assets/logo.png" alt="">
                 </div>
-                <h1 class="text-xl">Dev<span class="text-xl font-bold">Board</span></h1>
+                <h1 class="text-xl font-semibold">Dev<span class="text-xl font-bold">Board</span></h1>
             </div>
             <div class="flex items-center">
                 <div class="flex items-center mr-3">
                     
-                    <!-- <button class="cust-class bg-indigo-900"><a href="index.html">Back Home</a></button> -->
+                    <button class="cust-class rounded-md bg-blue-700"><a href="index.html">Back to Desk</a></button>
                 </div>
             </div>
         </div>
-      
-        <!-- Date -->
-    <div class="container py-3">
-        <h1 class="heading_blog">Question-1: What are the different Ways to select on element in the DOM?</h1>
+      <div class="flex justify-center items-center">
+        <h1 class="font-bold text-2xl items-center">Blogs</h1>
+      </div>
+    
+    <div class="container p-4 bg-white rounded-lg mt-6">
+        <h1 class="heading_blog font-bold">Question-1: What are the different Ways to select on element in the DOM?</h1>
             
         <p>In JavaScript, there are several ways to select elements in the DOM</p>
         <ul>
@@ -40,26 +43,39 @@
         </ul>
 
     </div>
-    <div class="container py-3">
-        <h1 class="heading_blog">Question-2:  What is the difference between innerHTML, innerText, and textContent ?</h1>
-            
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi possimus, distinctio dolor odit aliquid provident.</p>
+    <div class="container p-4 bg-white rounded-lg mt-3">
+        <h1 class="heading_blog font-bold">Question-2:  What is the difference between innerHTML, innerText, and textContent ?</h1>
+            <div class="">
+                <div>
+                    <h1 class="font-semibold">innerHTML:</h1>
+                <p>When use the innerHTML property, it reads both the HTML markup and the text content of the element. This means when you use it to set the content of elements, you can include HTML tags, and the browser will render them correctly.</p>
+                </div>
+                <div>
+                    <h1 class="font-semibold">innerText:</h1>
+                    <p>When need to account for styles, you should consider using innerText. Modifying the innerText of an element means the browser may need to adjust the layout to accommodate the changes in text size, which can have performance implications.</p>
+                </div>
+                <div>
+                    <h1 class="font-semibold">textContent:</h1>
+                    <p>The textContent property also ignores all HTML tags and returns only the text. Whiles innerText reads text as it is rendered on screen, textContent reads text as it is in the markup. It also returns all text, whether it's rendered on screen or not.</p>
+                </div>
+            </div>
+        
     </div>
-    <div class="container py-3">
-        <h1 class="heading_blog">Question-3: What is event delegation in the DOM?</h1>
+    <div class="container p-4 bg-white rounded-lg mt-3">
+        <h1 class="heading_blog font-bold">Question-3: What is event delegation in the DOM?</h1>
             
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi possimus, distinctio dolor odit aliquid provident.</p>
+        <p>Event Delegation is a technique in JavaScript where a single event listener is added to a parent element to handle events on its child elements, even if they are added dynamically.</p>
     </div>
-    <div class="container py-3">
-        <h1 class="heading_blog">Question-4: What is event bubbling in the DOM?
+    <div class="container p-4 bg-white rounded-lg mt-3">
+        <h1 class="heading_blog font-bold">Question-4: What is event bubbling in the DOM?
         </h1>
             
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi possimus, distinctio dolor odit aliquid provident.</p>
+        <p>Event bubbling is a behavior in JavaScript where an event starts from the target element and propagates to its ancestors in the DOM hierarchy.</p>
     </div>
-    <div class="container py-3">
-        <h1 class="heading_blog">Question-5: How do you create, add, and remove elements using JavaScript?</h1>
+    <div class="container p-4 bg-white rounded-lg mt-3">
+        <h1 class="heading_blog font-bold">Question-5: How do you create, add, and remove elements using JavaScript?</h1>
             
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi possimus, distinctio dolor odit aliquid provident.</p>
+        <p>In this approach, we are using the createElement() method to dynamically add a new HTML tag and the removeChild method to remove it.</p>
     </div>
         </div>
     </div>
