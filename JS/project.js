@@ -1,11 +1,10 @@
 
-// Dynamicaly color chnage
+// Dynamicaly color change
 let button = document.getElementById("changeColor");
 
 button.addEventListener("click", function () {
-    
-    let colors = ["#6C7FFA", "#9BA8F8", "#FF5178", "#FF9259", "#49B296"];
 
+    let colors = ["#6C7FFA", "#9BA8F8", "#FF5178", "#FF9259", "#49B296", "#3752FD"];
 
     let randomColor = colors[Math.floor(Math.random() * colors.length)];
 
@@ -36,17 +35,7 @@ function updateCurrentDate() {
 
 // Show custom alert
 function showAlert(message) {
-    // Standard alert
     alert(message);
-
-    // Custom styled alert
-    const customAlert = document.getElementById('customAlert');
-    customAlert.classList.add('show');
-
-    // Hide after 3 seconds
-    setTimeout(() => {
-        customAlert.classList.remove('show');
-    }, 3000);
 }
 
 // Increment notification count
@@ -54,14 +43,7 @@ function incrementNotificationCount() {
     currentNotificationCount++;
     const notificationBadge = document.getElementById('notification-count');
     notificationBadge.textContent = currentNotificationCount;
-
-    // Add pulse animation
-    notificationBadge.classList.add('pulse');
-    setTimeout(() => {
-        notificationBadge.classList.remove('pulse');
-    }, 500);
 }
-
 // Reset notification count
 function resetNotificationCount() {
     currentNotificationCount = INITIAL_NOTIFICATION_COUNT;
@@ -137,6 +119,12 @@ document.addEventListener('DOMContentLoaded', function () {
             // Show alert message
             showAlert("Board Updated Successfully");
         });
+    });
+    //complated Congratulations alert
+    let complateTask = document.querySelector(".complate-task");
+
+    complateTask.addEventListener("click", function () {
+        alert("Congratulations! You've Complated the all task!");
     });
 
     // Clear history button
